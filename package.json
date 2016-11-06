@@ -1,25 +1,25 @@
 {
-  "name": "jsfactory",
-  "version": "1.0.0",
-  "description": "Factory design pattern in javascript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gergob/jsFactory.git"
-  },
-  "keywords": [
-    "design",
-    "patterns",
-    "factory",
-    "javascript"
-  ],
-  "author": "Gergo Bogdan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gergob/jsFactory/issues"
-  },
-  "homepage": "https://github.com/gergob/jsFactory#readme"
+	"name": "jsfactory",
+	"version": "1.0.0",
+	"description": "Factory design pattern in javascript",
+	"keywords": [
+		"design",
+		"patterns",
+		"factory",
+		"javascript"
+	],
+	"homepage": "https://github.com/gergob/jsFactory#readme",
+	"bugs": {
+		"url": "https://github.com/gergob/jsFactory/issues"
+	},
+	"license": "MIT",
+	"author": "Gergo Bogdan",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gergob/jsFactory.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
 }
