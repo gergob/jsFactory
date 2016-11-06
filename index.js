@@ -1,6 +1,6 @@
 var Factory = require('./factory');
 
-var employeeFactory = Factory.factory()
+var employeeFactory = Factory.getFactory('EmployeeFactory');
 
 employeeFactory.addTypeSupport('sales', function createSales() {
     return {
@@ -11,6 +11,8 @@ employeeFactory.addTypeSupport('sales', function createSales() {
     };
 });
 
+console.log('Our factory is named:' + employeeFactory.getName());
+
 var johnDoe = employeeFactory.build('sales');
 console.log('John Doe is:' + JSON.stringify(johnDoe, null, 2));
 
@@ -18,4 +20,4 @@ try {
   var dannyDoe = employeeFactory.build('ceo');
 } catch (e) {
   console.error(e.message);
-} 
+}
