@@ -6,10 +6,11 @@ function ConfigurableFactory(name) {
         if (!typeName || (!buildFunc && typeof(buildFunc) !== 'function')) {
             throw Error('typeName parameter needs to be defined and buildFunc paramter has to be a function');
         }
-        if (typeMapper[typeName.toLowerCase()]) {
+        var lcTypeName = typeName.toLowerCase();
+        if (typeMapper[lcTypeName]) {
             throw Error('There is already a [' + typeName + '] type defined');
         }
-        typeMapper[typeName] = buildFunc;
+        typeMapper[lcTypeName] = buildFunc;
     }
 
     var getObject = function(typeName) {
