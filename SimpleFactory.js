@@ -1,21 +1,40 @@
 function SimpleFactory(name) {
-  var factoryName = name;
+    var factoryName = name;
 
-  var getSalesEmployee = function (firstName, lastName) {
+    var getSalesEmployee = function(firstName, lastName) {
+        return {
+            firstName: firstName,
+            lastName: lastName,
+            comission: 0,
+            salary: 100,
+            projects: [],
+            type: 'sales'
+        };
+    }
+
+    var getEngineerEmployee = function(firstName, lastName) {
+        return {
+            firstName: firstName,
+            lastName: lastName,
+            salar: 150,
+            manager: '',
+            technologies: [],
+            projects: [],
+            type: 'engineer'
+        }
+    }
+
+    var getName = function() {
+        return factoryName;
+    }
+
     return {
-      firstName: firstName,
-      lastName: lastName,
-      comission: 0,
-      projects: [],
-      type: 'sales'
-    };
-  }
-  
-  return{
-    getSalesEmployee: getSalesEmployee
-  }
+        getSales: getSalesEmployee,
+        getEngineer: getEngineerEmployee,
+        getName: getName
+    }
 }
 
 module.exports = {
-  getInstance: SimpleFactory
+    getInstance: SimpleFactory
 }
