@@ -1,2 +1,2 @@
 # jsFactory
-Facotry Design Pattern in JS
+Factory Design Pattern in JS
