@@ -1,4 +1,4 @@
-function factory(name) {
+function ConfigurableFactory(name) {
   var typeMapper = {};
   var factoryName = name;
 
@@ -14,9 +14,12 @@ function factory(name) {
 
   var build = function (typeName) {
     var lcTypeName = typeName.toLowerCase();
-    if (typeMapper[lcTypeName]) {
-        return typeMapper[lcTypeName]();
+    var builder = typeMapper[lcTypeName];
+
+    if (builder !== undefined) {
+        return builder();
     }
+
     throw Error('No buildFunc defined for type:[' + typeName + ']');
   }
 
@@ -33,5 +36,5 @@ function factory(name) {
 
 
 module.exports = {
-    getFactory: factory
+    getInstance: ConfigurableFactory
 }

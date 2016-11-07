@@ -1,6 +1,6 @@
-var Factory = require('./factory');
+var ConfigurableFactory = require('./ConfigurableFactory');
 
-var employeeFactory = Factory.getFactory('EmployeeFactory');
+var employeeFactory = ConfigurableFactory.getInstance('EmployeeFactory');
 
 employeeFactory.addTypeSupport('sales', function createSales() {
     return {
