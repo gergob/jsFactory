@@ -20,7 +20,7 @@ function ConfigurableFactory(name) {
         return builder();
     }
 
-    throw Error('No buildFunc defined for type:[' + typeName + ']');
+    throw Error('Cannot build type:[' + typeName + '], does not know how to...');
   }
 
   var getName = function () {
