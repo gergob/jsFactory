@@ -1,7 +1,17 @@
 var ConfigurableFactory = require('./ConfigurableFactory');
+var SimpleFactory = require('./SimpleFactory');
+
+var SEPARATOR = "=============================================================";
+
+//
+// ConfigurableFactory
+//
+
+console.log(SEPARATOR);
+console.log("ConfigurableFactory sample")
+console.log(SEPARATOR);
 
 var employeeFactory = ConfigurableFactory.getInstance('EmployeeFactory');
-
 employeeFactory.addTypeSupport('sales', function createSales() {
     return {
         firstName: '',
