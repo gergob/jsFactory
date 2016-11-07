@@ -37,7 +37,7 @@ function FactoryDemo(demoName, factory) {
 
             console.log('The factory is called: [' + employeeFactory.getName() + ']');
 
-            var johnDoe = employeeFactory.build('sales');
+            var johnDoe = employeeFactory.get('sales');
             console.log('John Doe is:');
             console.log(JSON.stringify(johnDoe, null, 2));
 

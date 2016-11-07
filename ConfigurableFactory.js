@@ -12,7 +12,7 @@ function ConfigurableFactory(name) {
         typeMapper[typeName] = buildFunc;
     }
 
-    var build = function(typeName) {
+    var getObject = function(typeName) {
         var lcTypeName = typeName.toLowerCase();
         var builder = typeMapper[lcTypeName];
 
@@ -29,7 +29,7 @@ function ConfigurableFactory(name) {
 
     return {
         addTypeSupport: addTypeSupport,
-        build: build,
+        get: getObject,
         getName: getName
     }
 }
