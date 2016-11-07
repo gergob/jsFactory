@@ -43,7 +43,7 @@ function FactoryDemo(demoName, factory) {
 
             try {
                 console.log('Trying to build CEO...');
-                var dannyDoe = employeeFactory.build('ceo');
+                var dannyDoe = employeeFactory.get('ceo');
             } catch (e) {
                 console.error(e.message);
             }
