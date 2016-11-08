@@ -23,11 +23,11 @@ function FactoryDemo(demoName, factory) {
                 };
             });
 
-            employeeFactory.addTypeSupport('engineer', function createSales() {
+            employeeFactory.addTypeSupport('engineer', function createEngineer() {
                 return {
                     firstName: '',
                     lastName: '',
-                    salar: 150,
+                    salary: 150,
                     manager: '',
                     technologies: [],
                     projects: [],

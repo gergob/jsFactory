@@ -16,7 +16,7 @@ function SimpleFactory(name) {
         return {
             firstName: firstName,
             lastName: lastName,
-            salar: 150,
+            salary: 150,
             manager: '',
             technologies: [],
             projects: [],
